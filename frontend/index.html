@@ -22,6 +22,7 @@
     </a>
     <nav class="nav">
       <a href="#product">О продукте</a>
+      <a href="#workflow">Сценарий</a>
       <a href="#capabilities">Возможности</a>
       <a href="#experience">Experience</a>
       <a href="#dashboard">Dashboard</a>
@@ -40,7 +41,7 @@
         <div class="hero-copy reveal">
           <span class="eyebrow">BATMIN PLATFORM · FLAGSHIP PRODUCT</span>
           <h1>Управляйте компанией<br><span>в моменте</span></h1>
-          <p>ESMS объединяет инженеров, объекты, заявки, маршруты, аналитику и управленческие решения в единой цифровой среде.</p>
+          <p>ESMS объединяет сотрудников, клиентов, объекты, процессы, аналитику и управленческие решения в единой цифровой среде.</p>
           <div class="hero-actions">
             <button class="btn btn-primary" data-scroll="#experience">▶ Посмотреть Experience</button>
             <button class="btn btn-outline" data-action="contact">Запросить презентацию</button>
@@ -66,6 +67,85 @@
             <div class="hero-kpi"><span>SLA</span><b>98,7%</b></div>
             <div class="hero-kpi"><span>Инженеры онлайн</span><b>47</b></div>
             <div class="hero-kpi"><span>Заявки сегодня</span><b>2 174</b></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="workflow" class="section section-soft reveal">
+      <div class="section-heading">
+        <span class="eyebrow">ИНТЕРАКТИВНЫЙ СЦЕНАРИЙ</span>
+        <h2>Одна заявка проходит через всю систему</h2>
+        <p>Прокручивайте этапы и смотрите, как ESMS превращает событие клиента в управляемый процесс, результат и обновлённые KPI.</p>
+      </div>
+
+      <div class="workflow-demo">
+        <div class="workflow-steps" id="workflowSteps">
+          <button class="workflow-step active" data-step="0">
+            <span class="workflow-time">08:01</span>
+            <span><b>Заявка поступила</b><small>Автоматическая регистрация обращения</small></span>
+          </button>
+          <button class="workflow-step" data-step="1">
+            <span class="workflow-time">08:03</span>
+            <span><b>Менеджер подтвердил данные</b><small>Приоритет и срок определены</small></span>
+          </button>
+          <button class="workflow-step" data-step="2">
+            <span class="workflow-time">08:05</span>
+            <span><b>ESMS рассчитала маршрут</b><small>Оптимизация времени и расстояния</small></span>
+          </button>
+          <button class="workflow-step" data-step="3">
+            <span class="workflow-time">08:07</span>
+            <span><b>Назначен специалист</b><small>Учтены загрузка, компетенции и SLA</small></span>
+          </button>
+          <button class="workflow-step" data-step="4">
+            <span class="workflow-time">08:42</span>
+            <span><b>Прибытие на объект</b><small>Время и геопозиция зафиксированы</small></span>
+          </button>
+          <button class="workflow-step" data-step="5">
+            <span class="workflow-time">08:45</span>
+            <span><b>Фото «До»</b><small>Состояние объекта подтверждено</small></span>
+          </button>
+          <button class="workflow-step" data-step="6">
+            <span class="workflow-time">09:18</span>
+            <span><b>Работа выполнена</b><small>Чек-лист и результат сохранены</small></span>
+          </button>
+          <button class="workflow-step" data-step="7">
+            <span class="workflow-time">09:20</span>
+            <span><b>Фото «После»</b><small>Качество результата зафиксировано</small></span>
+          </button>
+          <button class="workflow-step" data-step="8">
+            <span class="workflow-time">09:22</span>
+            <span><b>Клиент принял работу</b><small>Подпись и документы сохранены</small></span>
+          </button>
+          <button class="workflow-step" data-step="9">
+            <span class="workflow-time">09:23</span>
+            <span><b>Dashboard обновился</b><small>KPI, SLA и отчётность пересчитаны</small></span>
+          </button>
+        </div>
+
+        <div class="workflow-screen">
+          <div class="workflow-screen-head">
+            <div>
+              <span class="screen-label">ESMS · ЖИВОЙ ПРОЦЕСС</span>
+              <h3 id="workflowTitle">Заявка поступила</h3>
+            </div>
+            <span class="workflow-status" id="workflowStatus">НОВАЯ</span>
+          </div>
+
+          <div class="workflow-preview" id="workflowPreview"></div>
+
+          <div class="workflow-ai" id="workflowAi">
+            <span>AI</span>
+            <div>
+              <b>Batmin AI анализирует процесс</b>
+              <p>Отклонений не обнаружено. Заявка укладывается в норматив SLA.</p>
+            </div>
+          </div>
+
+          <div class="workflow-controls">
+            <button class="btn btn-small btn-outline" id="workflowPrev">← Назад</button>
+            <span id="workflowProgress">Этап 1 из 10</span>
+            <button class="btn btn-small btn-primary" id="workflowNext">Далее →</button>
           </div>
         </div>
       </div>
@@ -131,31 +211,37 @@
 
     <section id="dashboard" class="section reveal">
       <div class="section-heading">
-        <span class="eyebrow">LIVE DASHBOARD</span>
-        <h2>Руководитель видит компанию сейчас</h2>
-        <p>События, показатели, риски и рекомендации собраны в одном рабочем экране.</p>
+        <span class="eyebrow">ИНТЕРАКТИВНЫЙ DASHBOARD</span>
+        <h2>Один экран — разные управленческие представления</h2>
+        <p>Переключайте вкладки и смотрите KPI, заявки, карту, сотрудников и интеллектуальные рекомендации ESMS.</p>
       </div>
-      <div class="dashboard">
+
+      <div class="dashboard-tabs" id="dashboardTabs">
+        <button class="active" data-dashboard-view="kpi">KPI</button>
+        <button data-dashboard-view="requests">Заявки</button>
+        <button data-dashboard-view="map">Карта</button>
+        <button data-dashboard-view="people">Сотрудники</button>
+        <button data-dashboard-view="ai">AI</button>
+      </div>
+
+      <div class="dashboard dashboard-interactive">
         <div class="dashboard-main">
           <div class="dashboard-header">
-            <div><strong>Оперативный Dashboard</strong><small>Обновление данных в реальном времени</small></div>
+            <div>
+              <strong id="dashboardViewTitle">Ключевые показатели</strong>
+              <small id="dashboardViewSubtitle">Обновление данных в реальном времени</small>
+            </div>
             <div class="status-live"><i></i>Система работает</div>
           </div>
-          <div class="kpi-row">
-            <div class="kpi"><span>Заявки в работе</span><b data-kpi="requests">284</b><small>−12 за час</small></div>
-            <div class="kpi"><span>SLA</span><b>98,7%</b><small>выше цели</small></div>
-            <div class="kpi"><span>Инженеры онлайн</span><b data-kpi="online">47</b><small>из 52</small></div>
-            <div class="kpi alert"><span>Критические события</span><b data-kpi="critical">3</b><small>требуют внимания</small></div>
-          </div>
-          <div class="chart-card">
-            <div class="chart-head"><strong>Динамика SLA и закрытых заявок</strong><span>Последние 12 часов</span></div>
-            <canvas id="slaChart" aria-label="График SLA"></canvas>
-          </div>
+
+          <div id="dashboardView" class="dashboard-view"></div>
         </div>
+
         <aside class="dashboard-side">
-          <div class="tabs">
-            <button class="active" data-feed="events">События</button>
-            <button data-feed="ai">AI-рекомендации</button>
+          <div class="side-summary">
+            <span class="screen-label">ЧТО ПРОИСХОДИТ</span>
+            <h3 id="sideSummaryTitle">Операционная картина стабильна</h3>
+            <p id="sideSummaryText">ESMS контролирует сроки, загрузку сотрудников и отклонения по SLA.</p>
           </div>
           <div class="feed" id="feed"></div>
         </aside>
@@ -216,10 +302,11 @@
     <div class="footer-grid">
       <div class="footer-brand"><strong>ESMS Platform</strong><p>Цифровая платформа управления бизнесом в режиме реального времени.</p></div>
       <div class="footer-col"><h4>Продукт</h4><a href="#product">О продукте</a><a href="#experience">Experience</a><a href="#dashboard">Dashboard</a></div>
-      <div class="footer-col"><h4>Экосистема</h4><a href="#capabilities">Возможности</a><a href="#ai">Batmin AI</a><a href="#ecosystem">Архитектура</a></div>
+      <div class="footer-col"><h4>Экосистема</h4><a href="#workflow">Сценарий</a>
+      <a href="#capabilities">Возможности</a><a href="#ai">Batmin AI</a><a href="#ecosystem">Архитектура</a></div>
       <div class="footer-col"><h4>Ресурсы</h4><a href="https://github.com/asminaev1981-sudo/esms-experience">GitHub</a><a href="#top">Документация</a><a href="#top">API</a></div>
     </div>
-    <div class="footer-bottom"><span>© 2026 Batmin Platform</span><span>ESMS Experience · v0.5.0</span></div>
+    <div class="footer-bottom"><span>© 2026 Batmin Platform</span><span>ESMS Experience · v0.6.1</span></div>
   </footer>
 
   <dialog id="contactDialog">
