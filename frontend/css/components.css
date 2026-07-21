@@ -1,2 +1,26 @@
-/* Build 0.2 component overrides */
+/* ESMS Experience v0.3 — components */
 [hidden]{display:none!important}
+
+/* Platform modules */
+.modules{background:linear-gradient(180deg,rgba(8,15,27,.2),rgba(13,24,42,.72),rgba(8,15,27,.2));}
+.modules .container{max-width:var(--container);margin:0 auto;}
+.section-subtitle{display:inline-block;color:var(--primary);font-size:12px;letter-spacing:.24em;font-weight:800;margin-bottom:18px;}
+.modules h2{font-size:clamp(34px,5vw,60px);line-height:1.08;letter-spacing:-.04em;margin:0 0 20px;}
+.section-text{max-width:820px;color:var(--muted);font-size:18px;line-height:1.7;margin:0 0 52px;}
+.modules-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.module-card{position:relative;overflow:hidden;padding:30px;border:1px solid var(--border);background:linear-gradient(160deg,rgba(19,35,59,.82),rgba(8,16,29,.76));border-radius:var(--radius);box-shadow:var(--shadow);transition:.28s ease;min-height:300px;}
+.module-card::before{content:"";position:absolute;inset:auto -35% -55% auto;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(57,169,255,.24),transparent 68%);transition:.35s ease;}
+.module-card:hover{transform:translateY(-8px);border-color:rgba(57,169,255,.5);box-shadow:0 22px 70px rgba(0,72,168,.24);}
+.module-card:hover::before{transform:scale(1.25);}
+.module-card .icon{font-size:44px;line-height:1;margin-bottom:42px;}
+.module-card h3{font-size:26px;margin:0 0 14px;}
+.module-card p{color:var(--muted);line-height:1.65;margin:0 0 28px;}
+.module-card button{border:0;border-radius:12px;padding:12px 18px;background:rgba(57,169,255,.12);color:#bfe4ff;font-weight:800;cursor:pointer;transition:.25s ease;}
+.module-card button:hover{background:linear-gradient(135deg,var(--primary),var(--primary2));color:white;transform:translateY(-2px);}
+
+/* subtle hover polish */
+.glass-card,.role-card,.metric,.ecosystem-node{will-change:transform;}
+.glass-card:hover,.metric:hover,.ecosystem-node:hover{transform:translateY(-5px);border-color:rgba(57,169,255,.35);}
+
+/* focus accessibility */
+:focus-visible{outline:2px solid var(--primary);outline-offset:3px;}
