@@ -1,53 +1,31 @@
-/* ==========================================
-   ESMS Experience
-   Build 0.1
-   app.js
-========================================== */
+document.addEventListener("DOMContentLoaded",()=>{
 
-document.addEventListener("DOMContentLoaded", () => {
+console.log("ESMS Experience Started");
 
-    console.log("ESMS Experience Build 0.1 loaded");
+const hero=document.querySelector(".hero-content");
 
-    // Hero animation
-    const hero = document.querySelector(".hero-content");
+hero.style.opacity=0;
 
-    hero.style.opacity = 0;
-    hero.style.transform = "translateY(40px)";
+hero.style.transform="translateY(80px)";
 
-    setTimeout(() => {
+setTimeout(()=>{
 
-        hero.style.transition =
-            "all 1s cubic-bezier(.22,.61,.36,1)";
+hero.style.transition="1.2s";
 
-        hero.style.opacity = 1;
-        hero.style.transform = "translateY(0)";
+hero.style.opacity=1;
 
-    },300);
+hero.style.transform="translateY(0px)";
 
-    // Primary Button
+},300);
 
-    const startButton =
-        document.querySelector(".primary");
+const btn=document.querySelector(".primary");
 
-    startButton.addEventListener("click",()=>{
+btn.onclick=()=>{
 
-        alert(
-            "Добро пожаловать в ESMS Experience!\n\nBuild 0.1"
-        );
+document.body.classList.add("experience");
 
-    });
+alert("Добро пожаловать в ESMS Experience.\nBuild 0.2");
 
-    // Secondary Button
-
-    const demoButton =
-        document.querySelector(".secondary");
-
-    demoButton.addEventListener("click",()=>{
-
-        alert(
-            "Форма заявки появится в Build 0.2"
-        );
-
-    });
+};
 
 });
