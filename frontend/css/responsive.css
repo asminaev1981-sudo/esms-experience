@@ -1,15 +1,22 @@
-@media(max-width:1080px){
+@media(max-width:1120px){
   .nav{display:none}
-  .modules-grid{grid-template-columns:repeat(2,1fr)}
-  .feature-grid{grid-template-columns:repeat(2,1fr)}
-  .command-preview,.ai-panel{grid-template-columns:1fr}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-copy{text-align:center}
+  .hero p{margin-inline:auto}
+  .hero-actions,.hero-foot{justify-content:center}
+  .hero-orbit{min-height:520px}
+  .hero-kpis{right:3%}
+  .feature-bento .large,.feature-bento .medium,.feature-bento .small{grid-column:span 6}
+  .dashboard,.ai-stage{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:820px){
+  .role-showcase{grid-template-columns:1fr}
   .kpi-row{grid-template-columns:repeat(2,1fr)}
-  .role-selector{grid-template-columns:repeat(2,1fr)}
-  .day-stage{grid-template-columns:1fr}
-  .ecosystem-stage{min-height:650px}
+  .orbit-node{width:116px;font-size:12px}
+  .hero-kpis{position:static;margin-top:18px;width:100%;grid-template-columns:repeat(3,1fr)}
+  .orbit-shell{width:min(440px,100%)}
+  .ecosystem{min-height:650px}
   .eco-node.planner{left:4%;top:12%}
   .eco-node.identity{right:4%;top:12%}
   .eco-node.ai{left:4%;bottom:20%}
@@ -17,31 +24,32 @@
 }
 @media(max-width:620px){
   .topbar{height:72px}
-  .topbar>.btn{display:none}
+  .top-actions .btn-outline{display:none}
   .brand img{width:48px;height:36px}
   .section{padding:88px 20px}
-  .hero{padding-top:120px}
-  .hero h1{font-size:42px}
+  .hero{padding-top:115px}
+  .hero h1{font-size:43px}
   .hero p{font-size:17px}
   .hero-actions{flex-direction:column}
   .hero-actions .btn{width:100%}
-  .live-strip{grid-template-columns:1fr 1fr}
-  .modules-grid,.feature-grid,.kpi-row,.footer-grid{grid-template-columns:1fr}
-  .command-main{padding:15px}
-  .chart-head{display:block}
+  .hero-orbit{min-height:460px}
+  .orbit-shell{width:360px;max-width:100%}
+  .orbit-core{width:140px;height:140px}
+  .orbit-node{width:100px;padding:12px 8px;font-size:11px}
+  .hero-kpis{grid-template-columns:1fr}
+  .feature-bento .large,.feature-bento .medium,.feature-bento .small{grid-column:span 12}
+  .role-demo-grid{grid-template-columns:1fr}
+  .kpi-row,.footer-grid{grid-template-columns:1fr}
   #slaChart{height:190px}
-  .timeline-event{grid-template-columns:62px 1fr;gap:10px}
-  .ai-orb-card{min-height:330px}
   .ai-orb{width:150px;height:150px}
-  .ecosystem-stage{min-height:720px}
-  .eco-node{width:128px;font-size:13px}
-  .eco-node.core{width:178px}
+  .ai-rec{grid-template-columns:38px 1fr}
+  .impact{grid-column:2;justify-self:start}
+  .ecosystem{min-height:720px}
+  .eco-node{width:126px;font-size:12px}
+  .eco-node.core{width:176px}
   .eco-node.planner{left:3%;top:11%}
   .eco-node.identity{right:3%;top:11%}
   .eco-node.ai{left:3%;bottom:24%}
   .eco-node.connect{right:3%;bottom:24%}
   .footer-bottom{flex-direction:column}
-  .experience-modal-body{padding:14px}
-  .role-selector{grid-template-columns:1fr}
-  .mini-dashboard{grid-template-columns:1fr}
 }
