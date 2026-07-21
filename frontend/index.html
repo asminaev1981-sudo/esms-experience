@@ -2,10 +2,10 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#070b14">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#040812">
   <title>ESMS Platform — Управление бизнесом в режиме реального времени</title>
-  <meta name="description" content="ESMS Platform — цифровая платформа управления бизнесом в режиме реального времени.">
+  <meta name="description" content="ESMS Platform — флагманский продукт Batmin Platform для управления бизнесом в режиме реального времени.">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/components.css">
@@ -14,196 +14,219 @@
 </head>
 <body>
   <div class="ambient" aria-hidden="true"></div>
+
   <header class="topbar">
     <a class="brand" href="#top" aria-label="ESMS Platform">
-      <img src="assets/images/esms-logo.png" alt="Логотип ESMS">
+      <img src="assets/images/esms-logo.png" alt="ESMS">
       <div><strong>ESMS</strong><span>Platform Experience</span></div>
     </a>
-    <nav class="nav" aria-label="Главная навигация">
-      <a href="#about">О продукте</a>
-      <a href="#modules">Модули</a>
-      <a href="#experience">Experience</a>
+    <nav class="nav">
+      <a href="#product">О продукте</a>
       <a href="#capabilities">Возможности</a>
+      <a href="#experience">Experience</a>
+      <a href="#dashboard">Dashboard</a>
       <a href="#ecosystem">Экосистема</a>
     </nav>
-    <button class="btn btn-small btn-outline" data-action="contact">Запросить демонстрацию</button>
+    <div class="top-actions">
+      <button class="btn btn-small btn-outline" data-action="contact">Запросить демо</button>
+      <a class="btn btn-small btn-primary" href="#dashboard">Открыть Dashboard</a>
+    </div>
   </header>
 
   <main id="top">
     <section class="hero section">
       <canvas id="network" aria-hidden="true"></canvas>
-      <div class="hero-copy reveal">
-        <span class="eyebrow">BATMIN PLATFORM · FLAGSHIP PRODUCT</span>
-        <h1>Управление бизнесом<br><span>в режиме реального времени</span></h1>
-        <p>ESMS объединяет процессы, людей, объекты, данные и управленческие решения в одной цифровой среде.</p>
-        <div class="hero-actions">
-          <button class="btn btn-primary" id="startExperience">Начать рабочий день</button>
-          <a class="btn btn-outline" href="#about">Узнать о платформе</a>
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">BATMIN PLATFORM · FLAGSHIP PRODUCT</span>
+          <h1>Управляйте компанией<br><span>в моменте</span></h1>
+          <p>ESMS объединяет инженеров, объекты, заявки, маршруты, аналитику и управленческие решения в единой цифровой среде.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" data-scroll="#experience">▶ Посмотреть Experience</button>
+            <button class="btn btn-outline" data-action="contact">Запросить презентацию</button>
+          </div>
+          <div class="hero-foot">
+            <span>Данные в реальном времени</span>
+            <span>Единый центр управления</span>
+            <span>Интеллектуальные рекомендации</span>
+          </div>
         </div>
-        <div class="live-strip" aria-label="Демонстрационные показатели">
-          <div><b data-counter="4287">0</b><span>сотрудников</span></div>
-          <div><b data-counter="18246">0</b><span>объектов</span></div>
-          <div><b data-counter="2174">0</b><span>заявки сегодня</span></div>
-          <div><b data-counter="968">0</b><span>SLA, %</span></div>
+
+        <div class="hero-orbit reveal">
+          <div class="orbit-shell">
+            <span class="orbit-line l1"></span><span class="orbit-line l2"></span><span class="orbit-line l3"></span><span class="orbit-line l4"></span><span class="orbit-line l5"></span>
+            <div class="orbit-core"><div><b>ESMS</b><span>CORE PLATFORM</span></div></div>
+            <div class="orbit-node n1">Planner<small>Карта и маршруты</small></div>
+            <div class="orbit-node n2">Identity<small>Доступ и роли</small></div>
+            <div class="orbit-node n3">Batmin AI<small>Аналитика и прогноз</small></div>
+            <div class="orbit-node n4">Connect<small>Коммуникации</small></div>
+            <div class="orbit-node n5">API<small>Интеграции</small></div>
+          </div>
+          <div class="hero-kpis">
+            <div class="hero-kpi"><span>SLA</span><b>98,7%</b></div>
+            <div class="hero-kpi"><span>Инженеры онлайн</span><b>47</b></div>
+            <div class="hero-kpi"><span>Заявки сегодня</span><b>2 174</b></div>
+          </div>
         </div>
       </div>
     </section>
-<!-- ================= PLATFORM MODULES ================= -->
 
-<section id="modules" class="modules section reveal">
-
-    <div class="container">
-
-        <span class="section-subtitle">
-            ПЛАТФОРМА ESMS
-        </span>
-
-        <h2>
-            Все инструменты управления<br>
-            в одной экосистеме
-        </h2>
-
-        <p class="section-text">
-            ESMS Platform объединяет управление инженерами,
-            клиентами, маршрутами, аналитикой,
-            искусственным интеллектом и внешними сервисами
-            в единую цифровую платформу.
-        </p>
-
-        <div class="modules-grid">
-
-            <div class="module-card">
-                <div class="icon">👨‍🔧</div>
-                <h3>ESMS</h3>
-                <p>Управление сервисными инженерами, заявками и KPI.</p>
-                <button>Подробнее</button>
-            </div>
-
-            <div class="module-card">
-                <div class="icon">🗺️</div>
-                <h3>Planner</h3>
-                <p>Карта клиентов, маршруты, сектора и геоаналитика.</p>
-                <button>Подробнее</button>
-            </div>
-
-            <div class="module-card">
-                <div class="icon">🦇</div>
-                <h3>Batmin AI</h3>
-                <p>Интеллектуальный помощник для анализа и управления.</p>
-                <button>Подробнее</button>
-            </div>
-
-            <div class="module-card">
-                <div class="icon">🔐</div>
-                <h3>Identity</h3>
-                <p>Единая система авторизации пользователей.</p>
-                <button>Подробнее</button>
-            </div>
-
-            <div class="module-card">
-                <div class="icon">📈</div>
-                <h3>Trading</h3>
-                <p>Алгоритмы анализа финансовых рынков.</p>
-                <button>Подробнее</button>
-            </div>
-
-            <div class="module-card">
-                <div class="icon">⚙️</div>
-                <h3>API</h3>
-                <p>Интеграция платформы с внешними системами.</p>
-                <button>Подробнее</button>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-    <section id="about" class="section content-section reveal">
+    <section id="product" class="section section-soft reveal">
       <div class="section-heading">
-        <span class="eyebrow">ЧТО ТАКОЕ ESMS</span>
-        <h2>Компания как единая цифровая система</h2>
-        <p>Не очередной набор экранов, а связанная модель бизнеса, в которой каждое событие становится управленческой информацией.</p>
+        <span class="eyebrow">ЕДИНАЯ ЦИФРОВАЯ МОДЕЛЬ</span>
+        <h2>Не набор экранов. Управляемая система бизнеса.</h2>
+        <p>Каждое событие — от новой заявки до решения руководителя — становится частью единого цифрового процесса.</p>
       </div>
-      <div class="feature-grid">
-        <article class="glass-card"><span>01</span><h3>Единое пространство</h3><p>Заявки, персонал, объекты, документы, показатели и аналитика работают в одной среде.</p></article>
-        <article class="glass-card"><span>02</span><h3>Реальное время</h3><p>Руководитель видит изменения в момент их возникновения, а не после подготовки отчёта.</p></article>
-        <article class="glass-card"><span>03</span><h3>Управляемые процессы</h3><p>Каждый этап имеет владельца, статус, срок, историю и измеримый результат.</p></article>
-        <article class="glass-card"><span>04</span><h3>Масштабирование</h3><p>От небольшой компании до распределённой сети подразделений и объектов.</p></article>
+      <div class="feature-bento">
+        <article class="bento-card large"><span class="bento-tag">CORE</span><div class="bento-icon">E</div><h3>ESMS Core</h3><p>Центральное управление заявками, персоналом, объектами, сроками, SLA и качеством.</p><div class="bento-visual"></div></article>
+        <article class="bento-card large"><span class="bento-tag">LIVE</span><div class="bento-icon">◈</div><h3>Command Center</h3><p>Оперативная картина компании, события, риски, KPI и управленческие решения.</p><div class="bento-visual"></div></article>
+        <article class="bento-card medium"><div class="bento-icon">⌖</div><h3>Planner</h3><p>Маршруты, карта объектов, сектора и пространственная аналитика.</p></article>
+        <article class="bento-card medium"><div class="bento-icon">AI</div><h3>Batmin AI</h3><p>Поиск отклонений, прогнозирование и рекомендации руководителю.</p></article>
+        <article class="bento-card medium"><div class="bento-icon">↗</div><h3>Analytics</h3><p>Показатели компании без ручной сборки таблиц и сводок.</p></article>
       </div>
     </section>
 
-    <section id="experience" class="section experience-section reveal">
+    <section id="capabilities" class="section reveal">
       <div class="section-heading center">
-        <span class="eyebrow">ESMS EXPERIENCE</span>
-        <h2>Представьте, что это уже ваша компания</h2>
-        <p>Выберите роль и проживите один рабочий день внутри ESMS.</p>
-      </div>
-      <div class="role-grid" id="roleGrid">
-        <button class="role-card" data-role="owner"><span class="role-icon">◆</span><h3>Владелец бизнеса</h3><p>Результат, риски, эффективность и рост.</p></button>
-        <button class="role-card" data-role="manager"><span class="role-icon">◈</span><h3>Руководитель</h3><p>KPI, SLA, загрузка и управленческие решения.</p></button>
-        <button class="role-card" data-role="dispatcher"><span class="role-icon">▦</span><h3>Диспетчер</h3><p>Очередь заявок, планирование и назначение.</p></button>
-        <button class="role-card" data-role="engineer"><span class="role-icon">⬡</span><h3>Инженер</h3><p>Маршрут, объект, фото и закрытие работ.</p></button>
-        <button class="role-card" data-role="analyst"><span class="role-icon">⌁</span><h3>Аналитик</h3><p>Тренды, отчёты и поиск точек роста.</p></button>
-      </div>
-
-      <div class="experience-panel" id="experiencePanel" hidden>
-        <div class="experience-toolbar">
-          <div><span class="status-dot"></span><b id="roleTitle">Руководитель</b><small>Демонстрационный режим</small></div>
-          <button class="btn btn-small btn-outline" id="closeExperience">Сменить роль</button>
-        </div>
-        <div class="timeline" id="timeline"></div>
-        <div class="dashboard-grid">
-          <div class="metric"><span>Открытые заявки</span><b id="metricRequests">284</b><small>−12 за последний час</small></div>
-          <div class="metric"><span>SLA</span><b id="metricSla">98,7%</b><small>выше цели на 1,7%</small></div>
-          <div class="metric"><span>Инженеры онлайн</span><b id="metricOnline">47</b><small>из 52 сотрудников</small></div>
-          <div class="metric"><span>События сегодня</span><b id="metricEvents">12 847</b><small>обновление в реальном времени</small></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="capabilities" class="section content-section reveal">
-      <div class="section-heading">
         <span class="eyebrow">ВОЗМОЖНОСТИ</span>
-        <h2>Все ключевые процессы под единым управлением</h2>
+        <h2>Один контур для ключевых процессов</h2>
+        <p>ESMS соединяет операционную работу, контроль качества, аналитику и коммуникации.</p>
       </div>
-      <div class="capability-list">
-        <div><b>01</b><h3>Операционное управление</h3><p>Заявки, приоритеты, маршруты, сроки и исполнители.</p></div>
-        <div><b>02</b><h3>Управление персоналом</h3><p>Загрузка, эффективность, дисциплина и KPI сотрудников.</p></div>
-        <div><b>03</b><h3>Аналитика и отчётность</h3><p>Показатели компании без ручной сборки таблиц и сводок.</p></div>
-        <div><b>04</b><h3>Контроль качества</h3><p>SLA, фото, документы, обратная связь и аудит действий.</p></div>
+      <div class="feature-bento">
+        <article class="bento-card small"><div class="bento-icon">▦</div><h3>Заявки</h3><p>Приоритеты, сроки, статусы и история.</p></article>
+        <article class="bento-card small"><div class="bento-icon">⬡</div><h3>Инженеры</h3><p>Загрузка, маршруты и эффективность.</p></article>
+        <article class="bento-card small"><div class="bento-icon">KPI</div><h3>KPI</h3><p>Измеримые показатели по ролям.</p></article>
+        <article class="bento-card small"><div class="bento-icon">SLA</div><h3>SLA</h3><p>Контроль сроков и предупреждения.</p></article>
+        <article class="bento-card small"><div class="bento-icon">⌁</div><h3>Аналитика</h3><p>Тренды, сравнения и прогнозы.</p></article>
+        <article class="bento-card small"><div class="bento-icon">☰</div><h3>Отчёты</h3><p>Автоматическая управленческая отчётность.</p></article>
+        <article class="bento-card small"><div class="bento-icon">◉</div><h3>Карта</h3><p>Объекты, сектора и геоаналитика.</p></article>
+        <article class="bento-card small"><div class="bento-icon">✦</div><h3>AI</h3><p>Рекомендации и раннее выявление рисков.</p></article>
       </div>
     </section>
 
-    <section id="ecosystem" class="section ecosystem reveal">
+    <section id="experience" class="section section-soft reveal">
+      <div class="section-heading">
+        <span class="eyebrow">ESMS EXPERIENCE</span>
+        <h2>Один продукт — пять рабочих ролей</h2>
+        <p>Выберите роль и посмотрите, как меняется рабочее пространство внутри одной системы.</p>
+      </div>
+      <div class="role-showcase">
+        <div class="role-list" id="roleList">
+          <button class="role-button active" data-role="owner"><b>Владелец бизнеса</b><span>Результат, риски и рост</span></button>
+          <button class="role-button" data-role="manager"><b>Руководитель</b><span>KPI, SLA и решения</span></button>
+          <button class="role-button" data-role="dispatcher"><b>Диспетчер</b><span>Очередь и назначение</span></button>
+          <button class="role-button" data-role="engineer"><b>Инженер</b><span>Маршрут и закрытие работ</span></button>
+          <button class="role-button" data-role="analyst"><b>Аналитик</b><span>Тренды и рекомендации</span></button>
+        </div>
+        <div class="role-demo">
+          <div class="role-demo-head">
+            <div><strong id="roleTitle">Рабочее пространство владельца</strong><small>Демонстрационный режим</small></div>
+            <div class="status-live"><i></i>Система онлайн</div>
+          </div>
+          <div class="role-demo-grid" id="roleMetrics"></div>
+          <div class="demo-story" id="roleStory"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="dashboard" class="section reveal">
+      <div class="section-heading">
+        <span class="eyebrow">LIVE DASHBOARD</span>
+        <h2>Руководитель видит компанию сейчас</h2>
+        <p>События, показатели, риски и рекомендации собраны в одном рабочем экране.</p>
+      </div>
+      <div class="dashboard">
+        <div class="dashboard-main">
+          <div class="dashboard-header">
+            <div><strong>Оперативный Dashboard</strong><small>Обновление данных в реальном времени</small></div>
+            <div class="status-live"><i></i>Система работает</div>
+          </div>
+          <div class="kpi-row">
+            <div class="kpi"><span>Заявки в работе</span><b data-kpi="requests">284</b><small>−12 за час</small></div>
+            <div class="kpi"><span>SLA</span><b>98,7%</b><small>выше цели</small></div>
+            <div class="kpi"><span>Инженеры онлайн</span><b data-kpi="online">47</b><small>из 52</small></div>
+            <div class="kpi alert"><span>Критические события</span><b data-kpi="critical">3</b><small>требуют внимания</small></div>
+          </div>
+          <div class="chart-card">
+            <div class="chart-head"><strong>Динамика SLA и закрытых заявок</strong><span>Последние 12 часов</span></div>
+            <canvas id="slaChart" aria-label="График SLA"></canvas>
+          </div>
+        </div>
+        <aside class="dashboard-side">
+          <div class="tabs">
+            <button class="active" data-feed="events">События</button>
+            <button data-feed="ai">AI-рекомендации</button>
+          </div>
+          <div class="feed" id="feed"></div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="ai" class="section section-soft reveal">
+      <div class="section-heading center">
+        <span class="eyebrow">BATMIN AI</span>
+        <h2>Интеллект внутри рабочих процессов</h2>
+        <p>AI анализирует события, находит отклонения и предлагает конкретные действия.</p>
+      </div>
+      <div class="ai-stage">
+        <div class="ai-core-card"><div><div class="ai-orb"></div><h3>Анализ в реальном времени</h3><p id="aiStatus">Обрабатываются события компании…</p></div></div>
+        <div class="ai-list">
+          <h3>Актуальные рекомендации</h3>
+          <div class="ai-rec"><span>01</span><div><b>Перераспределить двух инженеров</b><small>Северный сектор перегружен на 18%</small></div><span class="impact">SLA +4%</span></div>
+          <div class="ai-rec"><span>02</span><div><b>Изменить порядок маршрута</b><small>Сокращение пробега на 18 км</small></div><span class="impact">−36 мин</span></div>
+          <div class="ai-rec"><span>03</span><div><b>Проверить повторные обращения</b><small>Рост по одному типу оборудования</small></div><span class="impact">Риск ↓</span></div>
+          <div class="ai-rec"><span>04</span><div><b>Усилить утреннюю смену</b><small>Прогнозируется пиковая нагрузка</small></div><span class="impact">План готов</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ecosystem" class="section reveal">
       <div class="section-heading center">
         <span class="eyebrow">BATMIN ECOSYSTEM</span>
-        <h2>ESMS — флагман экосистемы</h2>
+        <h2>ESMS — центральный продукт экосистемы</h2>
+        <p>Все модули могут работать самостоятельно, но максимальную ценность дают вместе.</p>
       </div>
-      <div class="ecosystem-map">
-        <div class="ecosystem-node central">ESMS<span>Core Platform</span></div>
-        <div class="ecosystem-node">Planner<span>Маршруты и карта</span></div>
-        <div class="ecosystem-node">OpenClaw AI<span>Интеллектуальный помощник</span></div>
-        <div class="ecosystem-node">Connect<span>Корпоративные коммуникации</span></div>
-        <div class="ecosystem-node">Command Center<span>Единый центр управления</span></div>
+      <div class="ecosystem">
+        <svg viewBox="0 0 1000 540" preserveAspectRatio="none" aria-hidden="true">
+          <line x1="500" y1="270" x2="150" y2="120"/><line x1="500" y1="270" x2="850" y2="120"/>
+          <line x1="500" y1="270" x2="150" y2="430"/><line x1="500" y1="270" x2="850" y2="430"/>
+          <line x1="500" y1="270" x2="500" y2="490"/>
+        </svg>
+        <div class="eco-node core">ESMS<span>Core Platform</span></div>
+        <div class="eco-node planner">Planner<small>Карта и маршруты</small></div>
+        <div class="eco-node identity">Identity<small>Единый доступ</small></div>
+        <div class="eco-node ai">Batmin AI<small>Интеллектуальный слой</small></div>
+        <div class="eco-node connect">Connect<small>Коммуникации</small></div>
+        <div class="eco-node api">API<small>Интеграции</small></div>
       </div>
     </section>
 
     <section class="section final-cta reveal">
       <img src="assets/images/esms-logo.png" alt="ESMS">
       <h2>Не наблюдайте за бизнесом.<br>Управляйте им.</h2>
-      <p>Познакомьтесь с ESMS и посмотрите, как может работать ваша компания в новой цифровой модели.</p>
-      <div class="hero-actions"><button class="btn btn-primary" data-action="contact">Запросить демонстрацию</button><a class="btn btn-outline" href="#top">Вернуться наверх</a></div>
+      <p>Посмотрите ESMS на сценариях вашей компании и оцените, как может выглядеть единая цифровая модель управления.</p>
+      <div class="hero-actions" style="justify-content:center">
+        <button class="btn btn-primary" data-action="contact">Запросить демонстрацию</button>
+        <a class="btn btn-outline" href="#top">Вернуться наверх</a>
+      </div>
     </section>
   </main>
 
-  <footer><span>© 2026 Batmin Platform</span><span>ESMS Experience · v0.3.0</span></footer>
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand"><strong>ESMS Platform</strong><p>Цифровая платформа управления бизнесом в режиме реального времени.</p></div>
+      <div class="footer-col"><h4>Продукт</h4><a href="#product">О продукте</a><a href="#experience">Experience</a><a href="#dashboard">Dashboard</a></div>
+      <div class="footer-col"><h4>Экосистема</h4><a href="#capabilities">Возможности</a><a href="#ai">Batmin AI</a><a href="#ecosystem">Архитектура</a></div>
+      <div class="footer-col"><h4>Ресурсы</h4><a href="https://github.com/asminaev1981-sudo/esms-experience">GitHub</a><a href="#top">Документация</a><a href="#top">API</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Batmin Platform</span><span>ESMS Experience · v0.5.0</span></div>
+  </footer>
 
   <dialog id="contactDialog">
     <button class="dialog-close" aria-label="Закрыть">×</button>
     <span class="eyebrow">ПЕРСОНАЛЬНАЯ ДЕМОНСТРАЦИЯ</span>
     <h2>Покажем ESMS на сценариях вашей компании</h2>
-    <p>Форма будет подключена к действующему каналу заявок при размещении на batminplatform.pro.</p>
+    <p>Следующим этапом подключим рабочую форму заявки и публикацию на batminplatform.pro.</p>
     <button class="btn btn-primary dialog-ok">Понятно</button>
   </dialog>
 
