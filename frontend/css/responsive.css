@@ -53,3 +53,26 @@
   .eco-node.connect{right:3%;bottom:24%}
   .footer-bottom{flex-direction:column}
 }
+
+
+@media(max-width:980px){
+  .workflow-demo{grid-template-columns:1fr}
+  .workflow-screen{position:relative;top:auto}
+  .dashboard-kpis{grid-template-columns:repeat(2,1fr)}
+  .requests-row{grid-template-columns:80px 1fr 110px}
+  .requests-row>*:nth-child(3){display:none}
+  .ai-dashboard{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+  .workflow-step{grid-template-columns:54px 1fr;padding:13px}
+  .workflow-screen{padding:16px}
+  .workflow-data-grid{grid-template-columns:1fr}
+  .workflow-controls{flex-wrap:wrap}
+  .workflow-controls>span{order:-1;width:100%;text-align:center}
+  .dashboard-tabs{display:grid;grid-template-columns:repeat(2,1fr)}
+  .dashboard-tabs button:last-child{grid-column:1/-1}
+  .dashboard-kpis,.people-grid{grid-template-columns:1fr}
+  .requests-row{grid-template-columns:72px 1fr}
+  .requests-row>*:nth-child(3),.requests-row>*:nth-child(4){display:none}
+  .map-info{left:14px;right:14px;width:auto}
+}

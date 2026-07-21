@@ -7,3 +7,19 @@
   *,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
   .reveal{opacity:1;transform:none}
 }
+
+
+.workflow-preview.is-changing{
+  animation:workflowSwap .32s ease;
+}
+@keyframes workflowSwap{
+  0%{opacity:.2;transform:translateY(8px)}
+  100%{opacity:1;transform:none}
+}
+.dashboard-view.is-changing{
+  animation:dashboardSwap .28s ease;
+}
+@keyframes dashboardSwap{
+  0%{opacity:.2;transform:translateY(6px)}
+  100%{opacity:1;transform:none}
+}
