@@ -22,6 +22,13 @@ document.addEventListener('DOMContentLoaded',()=>{
   document.querySelectorAll('.role-card').forEach(card=>card.addEventListener('click',()=>{const data=roleData[card.dataset.role];roleTitle.textContent=data.title;timeline.innerHTML=data.events.map(([time,text])=>`<div><b>${time}</b><span>${text}</span></div>`).join('');panel.hidden=false;panel.scrollIntoView({behavior:reduceMotion?'auto':'smooth',block:'nearest'})}));
   document.getElementById('closeExperience').addEventListener('click',()=>{panel.hidden=true;document.getElementById('roleGrid').scrollIntoView({behavior:reduceMotion?'auto':'smooth'})});
 
+
+  document.querySelectorAll('.module-card button').forEach(btn=>btn.addEventListener('click',()=>{
+    const card=btn.closest('.module-card');
+    const name=card?.querySelector('h3')?.textContent || 'Модуль';
+    alert(`${name}: подробная интерактивная демонстрация будет добавлена в следующем релизе.`);
+  }));
+
   const dialog=document.getElementById('contactDialog');
   document.querySelectorAll('[data-action="contact"]').forEach(btn=>btn.addEventListener('click',()=>dialog.showModal()));
   dialog.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());
