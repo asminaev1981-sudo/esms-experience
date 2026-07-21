@@ -1,0 +1,103 @@
+/* =====================================
+   ESMS Hero
+===================================== */
+
+#particles{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    z-index:0;
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:900px;
+
+    height:900px;
+
+    background:radial-gradient(circle,
+            rgba(63,169,255,.18),
+            transparent 70%);
+
+    filter:blur(30px);
+
+    animation:heroGlow 8s ease-in-out infinite;
+
+}
+
+.hero h1{
+
+    font-weight:700;
+
+    letter-spacing:-2px;
+
+    text-shadow:
+
+            0 0 30px rgba(63,169,255,.18);
+
+}
+
+.hero p{
+
+    max-width:760px;
+
+    margin:auto;
+
+}
+
+.primary{
+
+    font-weight:600;
+
+}
+
+.secondary{
+
+    font-weight:600;
+
+}
+
+@keyframes heroGlow{
+
+    0%{
+
+        transform:scale(1);
+
+        opacity:.5;
+
+    }
+
+    50%{
+
+        transform:scale(1.15);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        opacity:.5;
+
+    }
+
+}
