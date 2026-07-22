@@ -21,11 +21,5 @@ document.addEventListener('DOMContentLoaded',()=>{
  screenDialog.querySelector('.screen-dialog-close').addEventListener('click',()=>screenDialog.close());
  screenDialog.addEventListener('click',e=>{if(e.target===screenDialog)screenDialog.close()});
 
- const menuToggle=document.getElementById('menuToggle'),mainNav=document.getElementById('mainNav');
- if(menuToggle&&mainNav){
-  menuToggle.addEventListener('click',()=>{const open=mainNav.classList.toggle('open');menuToggle.classList.toggle('active',open);menuToggle.setAttribute('aria-expanded',String(open))});
-  mainNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mainNav.classList.remove('open');menuToggle.classList.remove('active');menuToggle.setAttribute('aria-expanded','false')}));
- }
- document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(screenDialog?.open)screenDialog.close();mainNav?.classList.remove('open');menuToggle?.classList.remove('active')}});
-
+ const dialog=document.getElementById('contactDialog');document.querySelectorAll('[data-action="contact"]').forEach(b=>b.onclick=()=>dialog.showModal());dialog.querySelector('.dialog-close').onclick=()=>dialog.close();dialog.querySelector('.dialog-ok').onclick=()=>dialog.close();
 });
