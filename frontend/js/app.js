@@ -15,5 +15,17 @@ document.addEventListener('DOMContentLoaded',()=>{
  ];let idx=0;const preview=document.getElementById('workflowPreview');
  function render(i){idx=Math.max(0,Math.min(data.length-1,i));const d=data[idx];document.getElementById('workflowTitle').textContent=d.title;document.getElementById('workflowStatus').textContent=d.status;document.getElementById('workflowProgress').textContent=`Этап ${idx+1} из ${data.length}`;preview.innerHTML=`<article class="workflow-card"><p>${d.text}</p><div class="workflow-data-grid">${d.items.map(([k,v])=>`<div class="workflow-data"><span>${k}</span><b>${v}</b></div>`).join('')}</div></article>`;document.querySelectorAll('.workflow-step').forEach((s,n)=>{s.classList.toggle('active',n===idx);s.classList.toggle('done',n<idx)});document.getElementById('workflowPrev').disabled=idx===0;document.getElementById('workflowNext').disabled=idx===data.length-1}
  render(0);document.querySelectorAll('.workflow-step').forEach(b=>b.onclick=()=>render(+b.dataset.step));document.getElementById('workflowPrev').onclick=()=>render(idx-1);document.getElementById('workflowNext').onclick=()=>render(idx+1);
- const dialog=document.getElementById('contactDialog');document.querySelectorAll('[data-action="contact"]').forEach(b=>b.onclick=()=>dialog.showModal());dialog.querySelector('.dialog-close').onclick=()=>dialog.close();dialog.querySelector('.dialog-ok').onclick=()=>dialog.close();
+
+ const screenDialog=document.getElementById('screenDialog'),screenDialogImage=document.getElementById('screenDialogImage');
+ document.querySelectorAll('[data-lightbox]').forEach(btn=>btn.addEventListener('click',()=>{screenDialogImage.src=btn.dataset.lightbox;screenDialog.showModal()}));
+ screenDialog.querySelector('.screen-dialog-close').addEventListener('click',()=>screenDialog.close());
+ screenDialog.addEventListener('click',e=>{if(e.target===screenDialog)screenDialog.close()});
+
+ const menuToggle=document.getElementById('menuToggle'),mainNav=document.getElementById('mainNav');
+ if(menuToggle&&mainNav){
+  menuToggle.addEventListener('click',()=>{const open=mainNav.classList.toggle('open');menuToggle.classList.toggle('active',open);menuToggle.setAttribute('aria-expanded',String(open))});
+  mainNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mainNav.classList.remove('open');menuToggle.classList.remove('active');menuToggle.setAttribute('aria-expanded','false')}));
+ }
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(screenDialog?.open)screenDialog.close();mainNav?.classList.remove('open');menuToggle?.classList.remove('active')}});
+
 });
